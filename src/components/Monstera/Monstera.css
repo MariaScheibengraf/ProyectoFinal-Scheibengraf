@@ -1,0 +1,115 @@
+.plant {
+  max-width: 980px;
+  margin: 32px auto;
+  padding: 0 16px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.plant__breadcrumb {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+.plant__breadcrumb a {
+  color: #2563eb;
+  text-decoration: none;
+}
+.plant__breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.plant__card {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 24px;
+  align-items: start;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.plant__imageWrap {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #f3f4f6;
+}
+.plant__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.plant__info { padding: 8px 4px; }
+.plant__title {
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 0 0 8px;
+  color: #111827;
+}
+.plant__desc {
+  font-size: 15px;
+  color: #374151;
+  margin: 0 0 12px;
+}
+.plant__price {
+  font-size: 22px;
+  color: #065f46;
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+
+.plant__actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.plant__actions button {
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.02s ease-in, background 0.15s ease, border-color 0.15s ease;
+}
+.plant__actions button:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+.plant__actions button:active {
+  transform: scale(0.98);
+}
+
+.plant__qtyValue {
+  min-width: 32px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  color: #111827;
+}
+
+.plant__cta {
+  background: #10b981;
+  color: #ffffff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+.plant__cta:hover { background: #0ea371; }
+.plant__cta:active { transform: scale(0.98); }
+
+@media (max-width: 720px) {
+  .plant__card { grid-template-columns: 1fr; }
+}
+
+.plant__actions .plant__cta {
+  background: #10b981 !important;
+  color: #ffffff !important;
+  border: none !important;
+}

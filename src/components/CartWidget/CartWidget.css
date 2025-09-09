@@ -1,0 +1,13 @@
+.cartwidget {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #0f5132;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+.cartwidget:hover { background: #eef6f1; }
+
+.cartwidget__icon { font-size: 18px; line-height: 1; }

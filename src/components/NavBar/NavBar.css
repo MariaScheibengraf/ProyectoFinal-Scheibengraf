@@ -1,0 +1,126 @@
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f9f4ec;
+  padding: 0.8rem 2rem;
+  border-bottom: 2px solid #d4cfc4;
+  font-family: Arial, sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.nav-logo img {
+  height: 100px;
+  width: auto;
+  display: block;
+}
+
+.nav-categorias {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-categorias ul,
+.nav-categorias li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navlink {
+  color: #0f5132;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+.navlink:hover { background: #eef6f1; }
+.navlink.active { background: #10b981; color: #fff; }
+
+.nav-carrito {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c5530;
+  display: flex;
+  align-items: center;
+}
+
+.menu { position: relative; }
+.menu__btn {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 8px;
+  color: #0f5132;
+  font-weight: 500;
+  font-family: inherit;
+}
+.menu__btn::after {
+  content: "▾";
+  margin-left: 6px;
+  font-size: 0.8em;
+  opacity: 0.7;
+}
+.menu.open .menu__btn,
+.menu__btn:hover { background: #eef6f1; }
+.menu__btn:focus-visible {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+}
+
+.menu__list {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 220px;
+  padding: 8px;
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+  display: none;    
+  grid-template-columns: 1fr;
+  gap: 6px;
+  z-index: 50;
+}
+.menu.open .menu__list { display: grid; }
+
+.menu__list .navlink {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: #0f5132;
+  background: transparent;
+}
+.menu__list .navlink:hover { background: #f3f7f5; }
+
+@media (max-width: 720px) {
+  .nav-categorias { gap: 10px; }
+  .menu__list {
+    position: static;
+    box-shadow: none;
+    border: 0;
+    padding: 6px 0;
+  }
+}
+
+.nav-categorias,
+.nav-categorias .navlink,
+.menu__btn,
+.menu__list .navlink {
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.menu__btn {
+  font-family: inherit;
+  font-size: 1rem;
+}
